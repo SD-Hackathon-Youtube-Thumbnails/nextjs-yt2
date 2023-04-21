@@ -1,4 +1,5 @@
 // components/BackgroundSelection.js
+
 import { useRouter } from "next/router";
 
 const BackgroundSelection = ({ bgData }) => {
@@ -19,6 +20,8 @@ const BackgroundSelection = ({ bgData }) => {
 
   return (
     <div>
+      <h1>Select a background</h1>
+      <div style={{ display: "flex", flexWrap: "wrap" }}></div>
       {Object.entries(bgData).map(([key, url]) => {
         if (key.startsWith("bg")) {
           return (
@@ -26,6 +29,7 @@ const BackgroundSelection = ({ bgData }) => {
               key={key}
               src={url}
               alt={key}
+              style={{ width: "600px", cursor: "pointer" }}
               onClick={() => handleBackgroundSelection(url, bgData.text)}
             />
           );

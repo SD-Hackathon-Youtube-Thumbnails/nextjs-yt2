@@ -1,7 +1,9 @@
 // components/ThumbnailEditor.js
 import { useState } from "react";
+import styles from "./ThumbnailEditor.module.css";
 
 const ThumbnailEditor = ({ editorData }) => {
+  const [text, setText] = useState(editorData["text"]);
   const [fontFamily, setFontFamily] = useState(editorData["font-family"]);
   const [textColor1, setTextColor1] = useState(editorData["text-color-1"]);
   const [textColor2, setTextColor2] = useState(editorData["text-color-2"]);
@@ -67,71 +69,87 @@ const ThumbnailEditor = ({ editorData }) => {
   };
 
   return (
-    <div>
-      <div>
-        <label htmlFor="font-family">Font Family:</label>
-        <select
-          id="font-family"
-          value={fontFamily}
-          onChange={(e) => setFontFamily(e.target.value)}
-        >
-          <option value="Sofia Sans Black">Sofia Sans Black</option>
-          <option value="The Bold Font">The Bold Font</option>
-          <option value="Impact">Impact</option>
-          <option value="Bebas Neue">Bebas Neue</option>
-          <option value="Montserrat">Montserrat</option>
-        </select>
-        <label htmlFor="text-color-1">Text Color 1:</label>
-        <input
-          type="color"
-          id="text-color-1"
-          value={textColor1}
-          onChange={(e) => setTextColor1(e.target.value)}
-        />
-        <label htmlFor="text-color-2">Text Color 2:</label>
-        <input
-          type="text"
-          id="text-color-2"
-          value={textColor2}
-          onChange={(e) => setTextColor2(e.target.value)}
-        />
-        <label htmlFor="border-color">Border Color:</label>
-        <input
-          type="text"
-          id="border-color"
-          value={borderColor}
-          onChange={(e) => setBorderColor(e.target.value)}
-        />
-        <label htmlFor="border-size">Border Size:</label>
-        <input
-          type="number"
-          id="border-size"
-          value={borderSize}
-          onChange={(e) => setBorderSize(e.target.value)}
-        />
-        <label htmlFor="dropshadow-color">Drop Shadow Color:</label>
-        <input
-          type="text"
-          id="dropshadow-color"
-          value={dropShadowColor}
-          onChange={(e) => setDropShadowColor(e.target.value)}
-        />
-        <label htmlFor="dropshadow-offset">Drop Shadow Offset:</label>
-        <input
-          type="number"
-          id="dropshadow-offset"
-          value={dropShadowOffset}
-          onChange={(e) => setDropShadowOffset(e.target.value)}
-        />
+    <div className={styles.thumbnaileditor}>
+      <div className={styles.toolbar}>
+        <div className={styles.toolbargroup}>
+          <label htmlFor="text">Text:</label>
+          <textarea
+            id="text"
+            rows="3"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+        </div>
+        <div className={styles.toolbargroup}>
+          <label htmlFor="font-family">Font Family:</label>
+          <select
+            id="font-family"
+            value={fontFamily}
+            onChange={(e) => setFontFamily(e.target.value)}
+          >
+            <option value="Sofia Sans Black">Sofia Sans Black</option>
+            <option value="The Bold Font">The Bold Font</option>
+            <option value="Impact">Impact</option>
+            <option value="Bebas Neue">Bebas Neue</option>
+            <option value="Montserrat">Montserrat</option>
+          </select>
+        </div>
+        <div className={styles.toolbargroup}>
+          <label htmlFor="text-color-1">Text Color 1:</label>
+          <input
+            type="color"
+            id="text-color-1"
+            value={textColor1}
+            onChange={(e) => setTextColor1(e.target.value)}
+          />
+          <label htmlFor="text-color-2">Text Color 2:</label>
+          <input
+            type="color"
+            id="text-color-2"
+            value={textColor2}
+            onChange={(e) => setTextColor2(e.target.value)}
+          />
+        </div>
+        <div className={styles.toolbargroup}>
+          <label htmlFor="border-color">Border Color:</label>
+          <input
+            type="color"
+            id="border-color"
+            value={borderColor}
+            onChange={(e) => setBorderColor(e.target.value)}
+          />
+          <label htmlFor="border-size">Border Size:</label>
+          <input
+            type="number"
+            id="border-size"
+            value={borderSize}
+            onChange={(e) => setBorderSize(e.target.value)}
+          />
+        </div>
+        <div className={styles.toolbargroup}>
+          <label htmlFor="dropshadow-color">Drop Shadow Color:</label>
+          <input
+            type="color"
+            id="dropshadow-color"
+            value={dropShadowColor}
+            onChange={(e) => setDropShadowColor(e.target.value)}
+          />
+          <label htmlFor="dropshadow-offset">Drop Shadow Offset:</label>
+          <input
+            type="number"
+            id="dropshadow-offset"
+            value={dropShadowOffset}
+            onChange={(e) => setDropShadowOffset(e.target.value)}
+          />
+        </div>
+        <div className={styles.toolbargroup}>
+          <button onClick={updateThumbnail}>Update</button>
+          <button onClick={saveThumbnail}>Save</button>
+          <button onClick={downloadThumbnail}>Download</button>
+        </div>
       </div>
-
-      <div>
+      <div className={styles.thumbnailpreview}>
         <img src={thumbnailUrl} alt="Thumbnail Preview" />
-      </div>
-      <div>
-        <button onClick={updateThumbnail}>Update</button>
-        <button onClick={saveThumbnail}>Save</button>
-        <button onClick={downloadThumbnail}>Download</button>
       </div>
     </div>
   );

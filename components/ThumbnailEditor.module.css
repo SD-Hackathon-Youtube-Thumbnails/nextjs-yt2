@@ -1,0 +1,32 @@
+.thumbnaileditor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
+
+.toolbargroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.thumbnailpreview {
+  width: 70%;
+}
+
+.thumbnaileditor img {
+  max-width: 100%;
+  height: auto;
+}

@@ -5,7 +5,7 @@ import ThumbnailEditor from "../components/ThumbnailEditor";
 const EditorPage = () => {
   const router = useRouter();
   const editorData = JSON.parse(router.query.editorData || "{}");
-
+  console.log(editorData);
   return <ThumbnailEditor editorData={editorData} />;
 };
 
