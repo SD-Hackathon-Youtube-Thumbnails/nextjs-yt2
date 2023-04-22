@@ -21,9 +21,7 @@ const ThumbnailEditor = ({ editorData }) => {
     const response = await fetch(
       `https://datawb.com/fit-text.php?img=${encodeURIComponent(
         editorData["original"]
-      )}&text=${encodeURIComponent(
-        editorData["text"]
-      )}&font-family=${encodeURIComponent(
+      )}&text=${encodeURIComponent(text)}&font-family=${encodeURIComponent(
         fontFamily
       )}&text-color-1=${encodeURIComponent(
         textColor1
