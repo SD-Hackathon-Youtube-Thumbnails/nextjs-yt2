@@ -27,10 +27,10 @@ Key Features
 -   Increased visual appeal and engagement
 -   Personalized and tailored to individual content creators' needs
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Join the revolution of YouTube thumbnail design and sign up for YouTube Thumbnails today.
 
 ## Getting Started
-
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 First, run the development server:
 
 ```bash
