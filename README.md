@@ -3,6 +3,9 @@ YouTube Thumbnails
 
 YouTube Thumbnails is an innovative YouTube thumbnail generator that harnesses the power of SDXL and GPT to deliver eye-catching and high-converting thumbnails. Our target audience includes YouTube content creators, digital marketing agencies, and social media managers.
 
+![Screenshot (213)](https://user-images.githubusercontent.com/89584431/233777938-1c77fd9c-6736-4fab-b853-8051263a0f56.png)
+
+
 Why YouTube Thumbnails?
 -----------------------
 
