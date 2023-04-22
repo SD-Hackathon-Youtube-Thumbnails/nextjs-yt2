@@ -24,19 +24,19 @@ const ThumbnailEditor = ({ editorData }) => {
     const response = await fetch(
       `https://datawb.com/fit-text.php?img=${encodeURIComponent(
         editorData["original"]
-      )}&text=${encodeURIComponent(text)}&font-family=${encodeURIComponent(
+      )}&text=${encodeURIComponent(text)}&font_family=${encodeURIComponent(
         fontFamily
-      )}&text-color-1=${encodeURIComponent(
+      )}&text_color-1=${encodeURIComponent(
         textColor1
-      )}&text-color-2=${encodeURIComponent(
+      )}&text_color-2=${encodeURIComponent(
         textColor2
-      )}&border-color=${encodeURIComponent(
+      )}&border_color=${encodeURIComponent(
         borderColor
-      )}&border-size=${encodeURIComponent(
+      )}&border_size=${encodeURIComponent(
         borderSize
-      )}&dropshadow-color=${encodeURIComponent(
+      )}&dropshadow_color=${encodeURIComponent(
         dropShadowColor
-      )}&dropshadow-offset=${encodeURIComponent(dropShadowOffset)}`
+      )}&dropshadow_offset=${encodeURIComponent(dropShadowOffset)}`
     );
     const data = await response.json();
     setThumbnailUrl(data["fit"]);
