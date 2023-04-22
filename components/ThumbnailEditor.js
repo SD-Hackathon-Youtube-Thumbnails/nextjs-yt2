@@ -26,9 +26,9 @@ const ThumbnailEditor = ({ editorData }) => {
         editorData["original"]
       )}&text=${encodeURIComponent(text)}&font_family=${encodeURIComponent(
         fontFamily
-      )}&text_color-1=${encodeURIComponent(
+      )}&text_color_1=${encodeURIComponent(
         textColor1
-      )}&text_color-2=${encodeURIComponent(
+      )}&text_color_2=${encodeURIComponent(
         textColor2
       )}&border_color=${encodeURIComponent(
         borderColor
