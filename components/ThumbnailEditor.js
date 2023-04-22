@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./ThumbnailEditor.module.css";
 
 const ThumbnailEditor = ({ editorData }) => {
+  const [updatingThumbnail, setUpdatingThumbnail] = useState(false);
   const [text, setText] = useState(editorData["text"]);
   const [fontFamily, setFontFamily] = useState(editorData["font-family"]);
   const [textColor1, setTextColor1] = useState(editorData["text-color-1"]);
@@ -18,6 +19,8 @@ const ThumbnailEditor = ({ editorData }) => {
   const [thumbnailUrl, setThumbnailUrl] = useState(editorData["fit"]);
 
   const updateThumbnail = async () => {
+    setUpdatingThumbnail(true); // Set loading state to true
+
     const response = await fetch(
       `https://datawb.com/fit-text.php?img=${encodeURIComponent(
         editorData["original"]
@@ -37,6 +40,8 @@ const ThumbnailEditor = ({ editorData }) => {
     );
     const data = await response.json();
     setThumbnailUrl(data["fit"]);
+
+    setUpdatingThumbnail(false); // Set loading state back to false
   };
 
   const saveThumbnail = () => {
@@ -145,6 +150,11 @@ const ThumbnailEditor = ({ editorData }) => {
           <button onClick={saveThumbnail}>Save</button>
           <button onClick={downloadThumbnail}>Download</button>
         </div>
+        {updatingThumbnail && (
+          <div className={styles.loading}>
+            <p>Updating thumbnail...</p>
+          </div>
+        )}
       </div>
       <div className={styles.thumbnailpreview}>
         <img src={thumbnailUrl} alt="Thumbnail Preview" />
