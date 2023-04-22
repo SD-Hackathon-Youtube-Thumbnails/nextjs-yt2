@@ -24,7 +24,8 @@ Key Features
 -   AI and machine learning-powered text optimization
 -   Customization options for font styles, colors, and layouts
 -   Streamlined and cost-effective solution
-
+-   Increased visual appeal and engagement
+-   Personalized and tailored to individual content creators' needs
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
