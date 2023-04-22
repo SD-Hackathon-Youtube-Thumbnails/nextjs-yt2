@@ -8,6 +8,9 @@ Why YouTube Thumbnails?
 
 Creating captivating and engaging thumbnails can be a time-consuming and frustrating process. Traditional thumbnail design software can be costly and have limited capabilities. With YouTube Thumbnails, we offer a seamless and cost-effective solution that saves time, enhances visual appeal, and increases engagement.
 
+How it Works
+------------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
