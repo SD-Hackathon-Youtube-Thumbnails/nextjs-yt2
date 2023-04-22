@@ -1,3 +1,8 @@
+YouTube Thumbnails
+==================
+
+YouTube Thumbnails is an innovative YouTube thumbnail generator that harnesses the power of SDXL and GPT to deliver eye-catching and high-converting thumbnails. Our target audience includes YouTube content creators, digital marketing agencies, and social media managers.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
