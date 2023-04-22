@@ -87,11 +87,11 @@ const ThumbnailEditor = ({ editorData }) => {
             value={fontFamily}
             onChange={(e) => setFontFamily(e.target.value)}
           >
-            <option value="Sofia Sans Black">Sofia Sans Black</option>
-            <option value="The Bold Font">The Bold Font</option>
+            <option value="SofiaSansBlack">Sofia Sans Black</option>
+            <option value="TheBoldFont">The Bold Font</option>
             <option value="Impact">Impact</option>
-            <option value="Bebas Neue">Bebas Neue</option>
-            <option value="Montserrat">Montserrat</option>
+            <option value="BebasNeue">Bebas Neue</option>
+            <option value="MontserratExtraBold">Montserrat</option>
           </select>
         </div>
         <div className={styles.toolbargroup}>
