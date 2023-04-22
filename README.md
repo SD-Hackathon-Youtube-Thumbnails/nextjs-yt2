@@ -21,6 +21,9 @@ In today's competitive YouTube landscape, a compelling thumbnail is crucial for 
 Key Features
 ------------
 
+-   AI and machine learning-powered text optimization
+-   Customization options for font styles, colors, and layouts
+-   Streamlined and cost-effective solution
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
