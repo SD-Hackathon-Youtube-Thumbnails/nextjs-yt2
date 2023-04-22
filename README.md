@@ -13,6 +13,9 @@ How it Works
 
 By leveraging AI and machine learning technologies, YouTube Thumbnails optimizes text and image elements to create stunning and personalized thumbnails. Our platform offers a variety of customization options, including font styles, colors, and layouts, allowing creators to design thumbnails that align with their branding and vision.
 
+The Importance of Thumbnails
+----------------------------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
