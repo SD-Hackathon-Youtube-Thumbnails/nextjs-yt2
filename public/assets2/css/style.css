@@ -557,7 +557,7 @@ body {
 }
 
 main.page-wrapper {
-  background-image: url("http://localhost:3011/assets2/images/bg.png");
+  background-image: url("https://youtube-thumbnails.vercel.app/assets2/images/bg.png");
   /* background-repeat: no-repeat; */
   background-size: 100%;
 }
